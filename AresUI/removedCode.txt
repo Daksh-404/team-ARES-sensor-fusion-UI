@@ -1,0 +1,82 @@
+                      <div class="col-md-4">
+                          <div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span >
+                                <button type="button" class="btn btn-primary btn-block">Gentle Left Turn 90</button>
+                              </span>
+                            </div>
+                            <div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span >
+                                <button type="button" class="btn btn-primary btn-block center-block">Hard Left Turn 90</button>
+                              </span>
+                            </div>
+                            <div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span>
+                                <button type="button" class="btn btn-primary pull-right btn-block">Gentle Right Turn 90</button>
+                              </span>
+                            </div>
+                      </div>
+
+                      <div class="col-md-4">
+                          <div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span >
+                                <button type="button" class="btn btn-primary btn-block">Hard Right Turn 90</button>
+                              </span>
+                            </div>
+                            <div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span >
+                                <button type="button" class="btn btn-primary btn-block center-block">Left Turn 180</button>
+                              </span>
+                            </div>
+                            <div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span>
+                                <button type="button" class="btn btn-primary pull-right btn-block">Right Turn 180</button>
+                              </span>
+                            </div>
+                      </div>
+
+                      <div class="col-md-4">
+                          <div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span >
+                                <button type="button" class="btn btn-primary btn-block">Left Turn 360</button>
+                              </span>
+                            </div>
+                            <div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span >
+                                <button type="button" class="btn btn-primary btn-block center-block">Right Turn 360</button>
+                              </span>
+                            </div>
+                            <div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span>
+                                <button type="button" class="btn btn-primary pull-right btn-block">Reverse</button>
+                              </span>
+                            </div>
+                      </div>
+
+
+                              // Replaced by Keyboard controls
+
+                              <!--<label class="switch" style="margin-left:33%;margin-top: 24%;">
+                              <input type="checkbox">
+                              <span class="slider round"></span>
+                          </label>
+                        <p class="direction-information" style="margin-left:32%; margin-top: 10%;">ON / OFF</p>-->
+                          <!--<div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span >
+                                <button type="button" class="btn btn-primary btn-block">FORWARD</button>
+                              </span>
+                            </div>
+                            <div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span >
+                                <button type="button" class="btn btn-primary btn-block center-block">BACKWARD</button>
+                              </span>
+                            </div>
+                            <div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span>
+                                <button type="button" class="btn btn-primary pull-right btn-block">LEFT</button>
+                              </span>
+                            </div>
+                            <div class="col-md-12 btn-vert-block spacing-control-buttons">
+                              <span>
+                                <button type="button" class="btn btn-primary pull-right btn-block">RIGHT</button>
+                              </span>
+                            </div>-->

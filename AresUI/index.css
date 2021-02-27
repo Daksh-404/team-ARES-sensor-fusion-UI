@@ -1,0 +1,717 @@
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+body {
+  margin: 0px;
+  margin-top:50px;
+  overflow: hidden;
+  background-color: #2a2b3d;
+}
+.my-col1
+{
+  height:5em ;
+  border: 1px solid white;
+}
+.my-col2
+{
+  height: 15em;
+  border: 1px solid white;
+}
+.my-col3
+{
+  height:10em ;
+  border: 1px solid white;
+}
+.my-col4
+{
+  height:20em;
+  border:1px solid white;
+}
+.my-row {
+  height: 20em;
+  margin-bottom:20px;
+}
+.main-info
+{
+  font-size: 2.0rem;
+  margin-left: 18%;
+  margin-top:10%;
+  color:white; 
+}
+/*
+.main-info-distance
+{
+  font-size: 2.0rem;
+  margin-left: 15%;
+  margin-top:20%;
+  color:white; 
+}*/
+.direction-information
+{
+  color:white;
+}
+.right{
+  float:right;
+  margin-right:10%;
+}
+
+.left{
+  float:left;
+  margin-left:10%;
+}
+
+/*for buttons*/
+a.animated-button:link, a.animated-button:visited {
+position: relative;
+display: block;
+margin: 30px auto 0;
+padding: 14px 15px;
+color: #fff;
+font-size:14px;
+font-weight: bold;
+text-align: center;
+text-decoration: none;
+text-transform: uppercase;
+overflow: hidden;
+letter-spacing: .08em;
+border-radius: 0;
+text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+	content: "" !important;
+	position: absolute !important;
+	height: 0% ;
+	left: 50% !important;
+  top: 50% !important;
+	width: 150% !important;
+	z-index: -1;
+	-webkit-transition: all 0.75s ease 0s !important ;
+	-moz-transition: all 0.75s ease 0s;
+	-o-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s !important ;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover {
+color: #FFF;
+text-shadow: none;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+height: 450%;
+}
+a.animated-button:link, a.animated-button:visited {
+position: relative;
+display: block;
+margin: 10px auto 0;
+padding: 14px 15px;
+color: #fff;
+font-size:14px;
+border-radius: 0;
+font-weight: bold;
+text-align: center;
+text-decoration: none;
+text-transform: uppercase;
+overflow: hidden;
+letter-spacing: .08em;
+text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+}
+
+/* Victoria Buttons */
+
+a.animated-button.victoria-one {
+border: 2px solid #D24D57;
+}
+a.animated-button.victoria-one:after {
+background: #D24D57 !important; 
+-moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+-ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+-webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg) !important;
+transform: translateX(-50%) translateY(-50%) rotate(-25deg) !important;
+}
+
+/*semicircular gauge*/
+.content {
+  display: flex;
+}
+
+.mask {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 12.5rem;
+  height: 6.25rem;
+  margin: 0.55rem;
+}
+
+.semi-circle {
+  position: relative;
+  display: block;
+  width: 12.5rem;
+  height: 6.25rem;
+  background: linear-gradient(to right, #c0392b 0%, #f1c40f 50%, #1abc9c 100%);
+  border-radius: 50% 50% 50% 50%/100% 100% 0% 0%;
+}
+.semi-circle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  width: 8.75rem;
+  height: 4.375rem;
+  margin-left: -4.375rem;
+  background: #fff;
+  border-radius: 50% 50% 50% 50%/100% 100% 0% 0%;
+}
+
+.semi-circle--mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12.5rem;
+  height: 12.5rem;
+  background: transparent;
+  transform: rotate(120deg) translate3d(0, 0, 0);
+  transform-origin: center center;
+  backface-visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.semi-circle--mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  z-index: 2;
+  display: block;
+  width: 12.625rem;
+  height: 6.375rem;
+  margin: -1px 0 0 -1px;
+  background: #f2f2f2;
+  border-radius: 50% 50% 50% 50%/100% 100% 0% 0%;
+}
+
+.gauge--1 .semi-circle {
+  background: #1abc9c;
+  margin-right: 30%;
+}
+
+.gauge--2 .semi-circle {
+  background: #c0392b;
+}
+.gauge--2 .semi-circle--mask {
+  transform: rotate(20deg) translate3d(0, 0, 0);
+}
+.spacing-control-buttons
+{
+    margin-top:7%;   /* earlier values being 23% and 23%*/
+    margin-bottom:7%;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #101010;
+}
+
+
+.container .card {
+  position: relative;
+  width: 200px;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 236px;
+  border-radius: 4px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+
+.percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #000;
+  background: #222;
+  z-index: 1000;
+}
+
+.percent .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.percent .number h2 {
+  color: #777;
+  font-weight: 700;
+  font-size: 40px;
+  transition: 0.5s;
+}
+
+.card:hover .percent .number h2 {
+  color: #fff;
+}
+
+.percent .number h2 span {
+  font-size: 24px;
+  color: #777;
+  transition: 0.5s;
+}
+
+.card:hover .percent .number h2 span {
+  color: #fff;
+}
+
+.text {
+  position: relative;
+  color: #777;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.card:hover .text {
+  color: #fff;
+}
+
+svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  z-index: 1000;
+}
+
+svg circle
+{
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #191919;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+svg circle:nth-child(2) {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.card svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 0) / 100);
+  stroke: #ff04f7;
+}
+.my-col3{
+  height: 15em;
+}
+
+/*odometer css for distance travelled*/
+
+.odometer {
+  font-size: 92px;
+  height: 1.2em;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 9% auto 10% auto;
+ /* margin: 2em auto;*/
+  display: inline-block;
+  background: rgb(26, 25, 25);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: inset 0 2px 8px -2px #000;
+  -webkit-box-shadow: inset 0 2px 8px -2px #000;
+  box-shadow: inset 0 2px 8px -2px #000;
+}
+
+.digit {
+  display: inline-block;
+  height: 1em;
+  width: 0.63em;
+  overflow: hidden;
+  /*border-right: 1px solid rgba(0, 0, 0, 0.5);*/
+  border-left: 1px solid  rgba(255, 255, 255, 0.05);
+  border-right: 1px solid  rgba(255, 255, 255, 0.05);
+  /*padding:0 0.2em 0 0;*/
+}
+.digit:first-child {
+  border-left: none;
+}
+
+.digit-container {
+  line-height: 1em;
+  -webkit-animation: slide infinite linear;
+  animation: slide infinite linear;
+  padding-left: 5px;
+}
+
+.digit-one {
+  -webkit-animation-duration: 5000ms;
+  animation-duration: 5000ms;
+}
+
+.digit-ten {
+  -webkit-animation-duration: 50000ms;
+  animation-duration: 50000ms;
+}
+
+.digit-hundred {
+  -webkit-animation-duration: 500000ms;
+  animation-duration: 500000ms;
+}
+
+@-webkit-keyframes slide {
+  from {
+    -webkit-transform: translateY(-10em);
+  }
+  to {
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes slide {
+  from {
+    transform: translateY(-10em);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Time for some gloss and other fancy stuff.
+*/
+
+#compass {
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  
+  border: 10px solid #777;
+  
+  background: radial-gradient(
+    ellipse cover,
+    white,
+    #A3E2FC
+  );
+  
+  box-shadow:
+    0 0 4px #000,
+    0 0 1px 8px #ccc,
+    5px 10px 15px #48436f;
+  
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* A bit of animation on hover would be nice too! */
+
+#compass:before {
+  content: '';
+  
+  border: 2px dashed #444;
+  position: absolute;
+  left: 10px; right: 10px;
+  bottom: 10px; top: 10px;
+  
+  border-radius: 50%;
+}
+
+#compass:after {
+  content: '';
+  
+  position: absolute;
+  left: -10px; right: -10px;
+  bottom: -10px; top: -10px;
+  
+  border-radius: 50%;
+}
+
+
+/* neat! lets position the directions now - N E S W */
+
+#compass span {
+  position: absolute;
+  font-weight: bold;
+}
+
+/* North */
+#compass span:nth-child(1) {
+  left: 95px; top: 20px;
+}
+/* South */
+#compass span:nth-child(3) {
+  left: 95px; bottom: 20px;
+}
+
+/* East */
+#compass span:nth-child(2) {
+  right: 25px; top: 90px;
+}
+/* West */
+#compass span:nth-child(4) {
+  left: 25px; top: 90px;
+}
+
+
+/* Next up, is the pointer */
+
+/* A bit of CSS3 animations on the pointer would be nice */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#pointer {
+  width: 60px; height: 30px;
+  
+  /* Centering it */
+  position: relative;
+  left: 50%; top: 50%;
+  margin-left: -30px; margin-top: -15px;
+  
+    /*Compass rotating animation*/
+  animation: rotate 5s infinite alternate;
+}
+
+/* Now the trick i wanna use to create a diamond
+shaped pointer is to skew the #pointer
+
+But for some reason that did'nt work hence I did it
+on #pointer:before */
+
+#pointer:before {
+  content: '';
+  
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  
+  background: linear-gradient(
+    -63deg,
+    rgba(79,188,242,1) 1%,
+    rgba(26,110,206,1) 50%,
+    rgba(216,216,216,1) 51%,
+    rgba(244,94,80,1) 53%,
+    rgba(255,45,45,1) 100%
+  );
+  
+  transform: skewX(60deg);
+}
+
+/* Looks good, lets make the pointer's joint now */
+
+#pointer:after {
+  content: '';
+  
+  width: 10px; height: 10px;
+  background: #4781c0;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 4px 2px #4d4d4d,
+    0 0 5px 1px white;
+  
+  /* centering it */
+  position: absolute;
+  left: 50%; top: 50%;
+  margin-left: -5px; margin-top: -5px;
+}
+
+
+
+
+
+
+
+/*Keyboard keys*/
+.rotations-grid {
+  display: grid;
+  margin: 0 auto;
+  margin-top: 15%;
+  width: 120px;
+  height: 120px;
+  grid-template-columns: repeat(3, 40px);
+  grid-template-rows: repeat(3, 40px);
+  grid-template-areas: ". rotate-top ." "rotate-left . rotate-right" ". rotate-bottom .";
+}
+.rotations-grid button {
+  width: 100%;
+  border: 0;
+  background-color: #fff;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+.rotations-grid button ion-icon {
+  color: #555;
+}
+.rotations-grid #rotateLeft {
+  grid-area: rotate-left;
+}
+.rotations-grid #rotateTop {
+  grid-area: rotate-top;
+}
+.rotations-grid #rotateBottom {
+  grid-area: rotate-bottom;
+}
+.rotations-grid #rotateRight {
+  grid-area: rotate-right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
