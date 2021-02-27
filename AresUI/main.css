@@ -81,6 +81,22 @@
       height: 43em;
       border: 1px solid white;
   }
+  .my-col-new4
+  {
+      height: 6em;
+      border: 1px solid white;
+  }
+  .my-col-new5
+  {
+      height: 5em;
+      border: 1px solid white;
+  }
+  .my-col-new6
+  {
+      height: 2em;
+      border: 1px solid white;
+      background:#333436;
+  }
   .main-info
   {
     font-size: 2.0rem;
@@ -702,39 +718,7 @@
   
   
   
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*THERMOMETER*/
 
 
 .thermometer, .thermometer__tube {
@@ -944,9 +928,23 @@
   }
 }
 
-
+/*RIGHT SIDE BIG GRID*/
 
 .new{
   display: grid;
   grid-template-columns: 50% 50%;
+  margin-top: 6%;
+  margin-right: 10%;
+}
+.sensor-readings
+{
+  text-align: center;
+}
+.sensor-data
+{
+  margin-top: 6%;
+}
+.sensor-data-new
+{
+  margin-top:4%;
 }
