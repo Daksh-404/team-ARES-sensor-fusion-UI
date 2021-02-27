@@ -20,7 +20,7 @@ app.on('ready',function(){
     });
   // Load html in window
   win1.loadURL(url.format({
-        pathname:path.join(__dirname,"index.html"),
+        pathname:path.join(__dirname,"main.html"),
         protocol:"file",
         slashes:true,
     }));

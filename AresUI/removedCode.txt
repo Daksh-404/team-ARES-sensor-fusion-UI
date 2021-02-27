@@ -80,3 +80,55 @@
                                 <button type="button" class="btn btn-primary pull-right btn-block">RIGHT</button>
                               </span>
                             </div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            /////////////Temporary/////////////////////////
+
+
+                 <div class="row">
+            <div class="col-md-12 my-col3 gradient-border">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!--THIS ONE IS FOR PRESSURE -->
+
+
+
+
+                    </div>
+                    <div class="col-md-3">
+                         <!--THIS ONE IS FOR pH -->
+
+
+
+                    </div>
+                    <div class="col-md-3">
+                         <!--THIS ONE IS FOR MOISTURE -->
+
+
+
+                    </div>
+                    <div class="col-md-3">
+                         <!--THIS ONE IS FOR LEVEL OF METHANE -->
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+        </div>
